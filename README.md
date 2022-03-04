@@ -1,8 +1,8 @@
 # Performance Optimization for third-party scripts using Partytown 🎉
 
-👀 See the preview: [https://gatsbythirdpartyscriptsmain.gatsbyjs.io/](https://gatsbythirdpartyscriptsmain.gatsbyjs.io/)
+👀 See the preview: [https://gatsbythirdpartyscripts.gatsbyjs.io/](https://gatsbythirdpartyscripts.gatsbyjs.io/)
 
-🎉 See the Partytown preview [https://gatsbythirdpartyscriptsmain-featpartytown.gtsb.io/](https://gatsbythirdpartyscriptsmain-featpartytown.gtsb.io/)
+🎉 See the Partytown preview [https://gatsbythirdpartyscripts-featpartytown.gtsb.io/](https://gatsbythirdpartyscripts-featpartytown.gtsb.io/)
 
 📝 Read the post on the Gatsby Blog: []()
 
