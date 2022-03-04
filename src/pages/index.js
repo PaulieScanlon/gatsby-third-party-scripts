@@ -7,7 +7,7 @@ const Page = () => {
     <main>
       <h1>
         Performance Optimization for third-party scripts{' '}
-        <span role="img" aria-label=" Chart Increasing">
+        <span role="img" aria-label="Chart Increasing">
           📈
         </span>
       </h1>
