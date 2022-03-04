@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+import '../styles.css';
+
 const Page = () => {
   return (
     <main>

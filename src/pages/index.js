@@ -1,15 +1,22 @@
 import React from 'react';
-import { Link } from 'gatsby';
+
+import '../styles.css';
 
 const Page = () => {
   return (
     <main>
-      <h1>Index Page</h1>
+      <h1>
+        Performance Optimization for third-party scripts{' '}
+        <span role="img" aria-label=" Chart Increasing">
+          📈
+        </span>
+      </h1>
       <p>
-        This is an example template for helping you to learn how to build a site
-        powered by Gatsby
+        third-party scripts:{' '}
+        <a target="_blank" rel="noreferrer" href="https://www.gatsbyjs.com/plugins/gatsby-plugin-google-analytics/">
+          gatsby-plugin-google-analytics
+        </a>
       </p>
-      <Link to="/about">About</Link>
     </main>
   );
 };
