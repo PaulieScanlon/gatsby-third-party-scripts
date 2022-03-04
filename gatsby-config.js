@@ -2,5 +2,5 @@ module.exports = {
   siteMetadata: {
     title: 'Gatsby thrid-party scripts'
   },
-  plugins: []
+  plugins: ['gatsby-plugin-gatsby-cloud']
 };
