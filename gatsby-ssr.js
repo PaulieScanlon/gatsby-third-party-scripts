@@ -6,21 +6,20 @@ export const onRenderBody = ({ setHeadComponents }) => {
     <Partytown
       key="partytown"
       debug={true}
-      resolveUrl={(url, location, method) => {
+      resolveUrl={((url, location, method) => {
         if (method !== 'GET') {
-          return url;
+          return url
         }
 
         if (url.hostname === 'www.google-analytics.com') {
-          var proxyUrl = new URL(location.origin);
-          proxyUrl.pathname = `/_partytown`;
-          proxyUrl.search = url.search;
-          proxyUrl.append('url', url.href);
-          return proxyUrl;
+          var proxyUrl = new URL(location.origin)
+          proxyUrl.pathname = `/_partytown`
+          proxyUrl.search = url.search
+          proxyUrl.append('url', url.href)
+          return proxyUrl
         }
 
-        return url;
-      }}
+        return url
     />,
     <script
       key="google-analytics"
