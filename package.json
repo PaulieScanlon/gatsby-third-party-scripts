@@ -25,8 +25,9 @@
   },
   "homepage": "https://github.com/gatsby-inc/gatsby-demo-minimal#readme",
   "dependencies": {
+    "@builder.io/partytown": "^0.4.2",
     "gatsby": "^4.9.0",
-    "gatsby-plugin-google-analytics": "^4.9.0",
+    "gatsby-plugin-gatsby-cloud": "^4.9.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
