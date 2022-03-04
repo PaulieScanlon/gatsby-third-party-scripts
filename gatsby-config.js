@@ -1,6 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Demo Minimal'
+    title: 'Gatsby thrid-party scripts'
   },
-  plugins: []
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-76055934-4',
+        anonymize: true,
+        enableWebVitalsTracking: true
+      }
+    }
+  ]
 };
