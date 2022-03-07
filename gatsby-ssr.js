@@ -1,26 +1,20 @@
-import React from "react";
-import { Partytown } from "@builder.io/partytown/react";
+import React from 'react';
+import { Partytown } from '@builder.io/partytown/react';
 
 export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <Partytown
       key="partytown"
       debug={true}
-      resolveUrl={(url, location, method) => {
-        console.log({ method });
-        if (
-          url.hostname === "www.google-analytics.com" &&
-          url.pathname.endsWith(".js")
-        ) {
+      resolveUrl={(url, location) => {
+        if (url.hostname === 'www.google-analytics.com' && url.pathname.endsWith('.js')) {
           var proxyUrl = new URL(`${location.origin}/google-analytics`);
-          proxyUrl.searchParams.append("url", url.href);
+          proxyUrl.searchParams.append('url', url.href);
           return proxyUrl;
         }
         return url;
       }}
     />,
-    // https://developers.google.com/analytics/devguides/collection/analyticsjs
-    // https://gatsbythirdpartyscripts-featpartytown.gtsb.io/
     <script
       key="google-analytics"
       type="text/partytown"
@@ -31,8 +25,8 @@ export const onRenderBody = ({ setHeadComponents }) => {
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
         ga('create', 'UA-76055934-15', 'auto');
-        ga('send', 'pageview');`,
+        ga('send', 'pageview');`
       }}
-    />,
+    />
   ]);
 };
