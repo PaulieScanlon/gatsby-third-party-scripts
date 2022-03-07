@@ -10,11 +10,3 @@ exports.onPreBuild = async ({ actions: { createRedirect } }) => {
     statusCode: 200,
   });
 };
-
-exports.createPages = async ({ graphql, actions: { createRedirect } }) => {
-  createRedirect({
-    fromPath: `/foo/test`,
-    toPath: `https://www.google.com/`,
-    statusCode: 200,
-  });
-};

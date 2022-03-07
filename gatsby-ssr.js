@@ -1,5 +1,5 @@
-import React from 'react';
-import { Partytown } from '@builder.io/partytown/react';
+import React from "react";
+import { Partytown } from "@builder.io/partytown/react";
 
 export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
@@ -7,12 +7,11 @@ export const onRenderBody = ({ setHeadComponents }) => {
       key="partytown"
       debug={true}
       resolveUrl={(url, location) => {
-        console.log('url.href: ', url.href);
+        console.log("url.href: ", url.href);
 
-        if (url.hostname === 'www.google-analytics.com') {
-          var proxyUrl = new URL(`${location.origin}/google-analtyics`);
-          proxyUrl.searchParams.append('url', url.href);
-          console.log('proxyUrl: ', proxyUrl);
+        if (url.hostname === "www.google-analytics.com") {
+          var proxyUrl = new URL(`${location.origin}/google-analytics`);
+          proxyUrl.searchParams.append("url", url.href);
           return proxyUrl;
         }
         return url;
@@ -30,8 +29,8 @@ export const onRenderBody = ({ setHeadComponents }) => {
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
         ga('create', 'UA-76055934-15', 'auto');
-        ga('send', 'pageview');`
+        ga('send', 'pageview');`,
       }}
-    />
+    />,
   ]);
 };
