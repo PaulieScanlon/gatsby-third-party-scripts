@@ -7,7 +7,6 @@ export const onRenderBody = ({ setHeadComponents }) => {
       key="partytown"
       debug={true}
       resolveUrl={(url, location, method) => {
-        console.log({ method });
         if (
           url.hostname === "www.google-analytics.com" &&
           url.pathname.endsWith(".js")
