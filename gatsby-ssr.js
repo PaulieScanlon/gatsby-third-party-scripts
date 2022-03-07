@@ -7,7 +7,11 @@ export const onRenderBody = ({ setHeadComponents }) => {
       key="partytown"
       debug={true}
       resolveUrl={(url, location, method) => {
-        if (method === "GET" && url.hostname === "www.google-analytics.com") {
+        console.log({ method });
+        if (
+          url.hostname === "www.google-analytics.com" &&
+          url.pathname.endsWith(".js")
+        ) {
           var proxyUrl = new URL(`${location.origin}/google-analytics`);
           proxyUrl.searchParams.append("url", url.href);
           return proxyUrl;
