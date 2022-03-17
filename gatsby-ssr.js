@@ -23,7 +23,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
     // <script
     //   key="google-analytics"
     //   // type="text/partytown"
-    //   src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
+    //   src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GATSBY_GA_MEASUREMENT_ID}`}
     // />
   ]);
 
@@ -32,7 +32,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
       key="google-analytics"
       async
       // type="text/partytown"
-      src={`${origin}/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
+      src={`${origin}/gtag/js?id=${process.env.GATSBY_GA_MEASUREMENT_ID}`}
     />,
     <script
       key="google-analytics-config"
@@ -41,7 +41,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
           function gtag(){dataLayer.push(arguments);}
 
           gtag('js', new Date());
-          gtag('config', '${process.env.GA_MEASUREMENT_ID}');`
+          gtag('config', '${process.env.GATSBY_GA_MEASUREMENT_ID}');`
       }}
     />
   ]);
