@@ -1,9 +1,9 @@
 import React from 'react';
 import { Partytown } from '@builder.io/partytown/react';
 
-const GA_MEASUREMENT_ID = 'G-94MF2D2CTG';
-
 export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
+  console.log('process.env.GATSBY_GA_MEASUREMENT_ID: ', process.env.GATSBY_GA_MEASUREMENT_ID);
+
   setHeadComponents([
     <Partytown
       key="partytown"
@@ -19,7 +19,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
     <script
       key="google-analytics"
       type="text/partytown"
-      src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
     />
   ]);
 
@@ -31,7 +31,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
           function gtag(){dataLayer.push(arguments);}
 
           gtag('js', new Date());
-          gtag('config', '${GA_MEASUREMENT_ID}');`
+          gtag('config', '${process.env.GA_MEASUREMENT_ID}');`
       }}
     />
   ]);
