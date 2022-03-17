@@ -1,7 +1,9 @@
 import React from 'react';
 import { Partytown } from '@builder.io/partytown/react';
 
-export const onRenderBody = ({ setHeadComponents }) => {
+const GA_MEASUREMENT_ID = 'G-94MF2D2CTG';
+
+export const onRenderBody = ({ setHeadComponents, setBodyComponents }) => {
   setHeadComponents([
     <Partytown
       key="partytown"
@@ -17,7 +19,20 @@ export const onRenderBody = ({ setHeadComponents }) => {
     <script
       key="google-analytics"
       type="text/partytown"
-      src="https://www.googletagmanager.com/gtag/js?id=G-94MF2D2CTG"
+      src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+    />
+  ]);
+
+  setBodyComponents([
+    <script
+      key="google-analytics-config"
+      dangerouslySetInnerHTML={{
+        __html: `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+  
+          gtag('config', ${GA_MEASUREMENT_ID});`
+      }}
     />
   ]);
 };
