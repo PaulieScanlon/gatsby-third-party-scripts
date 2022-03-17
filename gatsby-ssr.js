@@ -18,7 +18,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
     />,
     <script
       key="google-analytics"
-      type="text/partytown"
+      // type="text/partytown"
       src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
     />
   ]);
