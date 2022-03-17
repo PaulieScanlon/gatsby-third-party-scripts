@@ -8,7 +8,7 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
     <Partytown
       key="partytown"
       resolveUrl={(url, location) => {
-        if (url.hostname === 'www.google-analytics.com' && url.pathname.endsWith('.js')) {
+        if (url.hostname === 'www.googletagmanager.com' && url.pathname.endsWith('.js')) {
           var proxyUrl = new URL(`${location.origin}/google-analytics`);
           proxyUrl.searchParams.append('url', url.href);
           return proxyUrl;
