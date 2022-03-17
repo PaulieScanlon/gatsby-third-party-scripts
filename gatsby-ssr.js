@@ -19,15 +19,15 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
       //   }
       //   return url;
       // }}
-    />
-  ]);
-
-  setPostBodyComponents([
+    />,
     <script
       key="google-analytics"
       type="text/partytown"
       src={`${origin}/gtag/js?id=${process.env.GATSBY_GA_MEASUREMENT_ID}`}
-    />,
+    />
+  ]);
+
+  setPostBodyComponents([
     <script
       key="google-analytics-config"
       dangerouslySetInnerHTML={{
