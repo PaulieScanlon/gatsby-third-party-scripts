@@ -4,11 +4,12 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        trackingId: 'UA-76055934-14',
-        anonymize: true,
-        enableWebVitalsTracking: true
+        trackingIds: ['G-94MF2D2CTG'],
+        gtagConfig: {
+          anonymize_ip: true
+        }
       }
     }
   ]
