@@ -5,7 +5,6 @@ export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <Partytown
       key="partytown"
-      debug={true}
       resolveUrl={(url, location) => {
         if (url.hostname === 'www.google-analytics.com' && url.pathname.endsWith('.js')) {
           var proxyUrl = new URL(`${location.origin}/google-analytics`);
