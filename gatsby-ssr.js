@@ -2,7 +2,7 @@ import React from 'react';
 import { Partytown } from '@builder.io/partytown/react';
 
 // const ORIGIN = 'www.google-analytics.com';
-const GATSBY_UA_PROPERTY = 'UA-76055934-16';
+// const GATSBY_UA_PROPERTY = 'UA-76055934-16';
 
 export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
@@ -26,7 +26,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        ga('create', ${GATSBY_UA_PROPERTY}, 'auto');
+        ga('create', 'UA-76055934-16', 'auto');
         ga('send', 'pageview');`
       }}
     />
