@@ -19,10 +19,10 @@ const Page = () => {
   );
 };
 
-export const config = () => {
-  return () => ({
-    defer: true
-  });
-};
+// export const config = () => {
+//   return () => ({
+//     defer: true
+//   });
+// };
 
 export default Page;
