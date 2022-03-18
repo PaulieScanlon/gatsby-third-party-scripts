@@ -12,6 +12,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
     <script key="google-analytics" type="text/partytown" src={`${ORIGIN}/gtag/js?id=${GATSBY_GA_MEASUREMENT_ID}`} />,
     <script
       key="google-analytics-config"
+      type="text/partytown"
       dangerouslySetInnerHTML={{
         __html: `window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
