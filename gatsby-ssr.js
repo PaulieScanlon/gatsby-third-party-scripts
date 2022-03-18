@@ -24,21 +24,32 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
       key="google-analytics"
       type="text/partytown"
       src={`${origin}/gtag/js?id=${process.env.GATSBY_GA_MEASUREMENT_ID}`}
+    />,
+    <script
+      key="google-analytics-config"
+      type="text/partytown"
+      dangerouslySetInnerHTML={{
+        __html: `window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        gtag('js', new Date()); 
+        gtag('config', '${process.env.GATSBY_GA_MEASUREMENT_ID}', { page_path: window.location.pathname })
+        
+        `
+      }}
     />
   ]);
 
   setPostBodyComponents([
-    <script
-      key="google-analytics-config"
-      dangerouslySetInnerHTML={{
-        __html: `window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-
-          gtag('js', new Date());
-          gtag('config', '${process.env.GATSBY_GA_MEASUREMENT_ID}', { page_path: window.location.pathname })
-          
-          `
-      }}
-    />
+    // <script
+    //   key="google-analytics-config"
+    //   dangerouslySetInnerHTML={{
+    //     __html: `window.dataLayer = window.dataLayer || [];
+    //       function gtag(){dataLayer.push(arguments);}
+    //       gtag('js', new Date());
+    //       gtag('config', '${process.env.GATSBY_GA_MEASUREMENT_ID}', { page_path: window.location.pathname })
+    //       `
+    //   }}
+    // />
   ]);
 };
