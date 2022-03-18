@@ -8,13 +8,10 @@ export const onRenderBody = ({ setHeadComponents }) => {
   if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') return null;
 
   setHeadComponents([
-    <link key="preconnect" rel="preconnect" key="preconnect-google-gtag" href={ORIGIN} />,
-    <link key="dns-prefetch" rel="dns-prefetch" key="dns-prefetch-google-gtag" href={ORIGIN} />,
-    <Partytown key="partytown" />,
+    <Partytown key="partytown" forward={['gtag']} />,
     <script key="google-analytics" type="text/partytown" src={`${ORIGIN}/gtag/js?id=${GATSBY_GA_MEASUREMENT_ID}`} />,
     <script
       key="google-analytics-config"
-      type="text/partytown"
       dangerouslySetInnerHTML={{
         __html: `window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
