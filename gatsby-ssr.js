@@ -5,6 +5,8 @@ const ORIGIN = 'https://www.googletagmanager.com';
 const GATSBY_GA_MEASUREMENT_ID = 'G-94MF2D2CTG';
 
 export const onRenderBody = ({ setHeadComponents }) => {
+  if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') return null;
+
   setHeadComponents([
     <link key="preconnect" rel="preconnect" key="preconnect-google-gtag" href={ORIGIN} />,
     <link key="dns-prefetch" rel="dns-prefetch" key="dns-prefetch-google-gtag" href={ORIGIN} />,
