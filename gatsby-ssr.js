@@ -35,7 +35,9 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
           function gtag(){dataLayer.push(arguments);}
 
           gtag('js', new Date());
-          gtag('config', '${process.env.GATSBY_GA_MEASUREMENT_ID}');`
+          gtag('config', '${process.env.GATSBY_GA_MEASUREMENT_ID}', { page_path: window.location.pathname })
+          
+          `
       }}
     />
   ]);
