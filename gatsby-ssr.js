@@ -14,8 +14,8 @@ export const onRenderBody = ({ setHeadComponents }) => {
       key="google-analytics-config"
       type="text/partytown"
       dangerouslySetInnerHTML={{
-        __html: `var dataLayer = window.dataLayer || [];
-        window.gtag = function gtag(){dataLayer.push(arguments);}
+        __html: `window.dataLayer = window.dataLayer || [];
+        window.gtag = function gtag(){ window.dataLayer.push(arguments);}
         gtag('js', new Date()); 
         gtag('config', '${GATSBY_GA_MEASUREMENT_ID}', { send_page_view: false })`
       }}
